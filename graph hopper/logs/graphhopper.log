@@ -1,0 +1,147 @@
+2019-10-15 00:48:54.801 [main] INFO  i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+2019-10-15 00:48:54.806 [main] INFO  i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+2019-10-15 00:48:56.638 [main] INFO  i.d.b.assets.ConfiguredAssetsBundle - Registering ConfiguredAssetBundle with name: assets for path /maps/*
+2019-10-15 00:48:56.650 [main] INFO  io.dropwizard.server.ServerFactory - Starting GraphHopperApplication
+                        _     _
+   __ _ _ __ __ _ _ __ | |__ | |__   ___  _ __  _ __   ___ _ __
+  / _` | '__/ _` | '_ \| '_ \| '_ \ / _ \| '_ \| '_ \ / _ \ '__|
+ | (_| | | | (_| | |_) | | | | | | | (_) | |_) | |_) |  __/ |
+  \__, |_|  \__,_| .__/|_| |_|_| |_|\___/| .__/| .__/ \___|_|
+  |___/          |_|                     |_|   |_|
+
+2019-10-15 00:48:56.737 [main] INFO  o.e.jetty.setuid.SetUIDListener - Opened application@30b975ad{HTTP/1.1,[http/1.1]}{localhost:8989}
+2019-10-15 00:48:56.738 [main] INFO  o.e.jetty.setuid.SetUIDListener - Opened admin@75e09567{HTTP/1.1,[http/1.1]}{localhost:8990}
+2019-10-15 00:48:56.740 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.z-SNAPSHOT; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_201-b09
+2019-10-15 00:48:56.771 [main] INFO  c.g.reader.osm.GraphHopperOSM - version 0.13.0|2019-09-17T21:00:20Z (5,15,4,3,3,5)
+2019-10-15 00:48:56.777 [main] INFO  c.g.reader.osm.GraphHopperOSM - graph CH|car|RAM_STORE|2D|NoExt|,,,,, details:edges:0(0MB), nodes:0(0MB), name:(0MB), geo:0(0MB), bounds:1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308, CHGraph|fastest|car|edge_based=false|u_turn_costs=-1, shortcuts:0, nodesCH:(0MB)
+2019-10-15 00:48:56.803 [main] INFO  c.g.reader.osm.GraphHopperOSM - start creating graph from oxford.pbf
+2019-10-15 00:48:56.803 [main] INFO  c.g.reader.osm.GraphHopperOSM - using CH|car|RAM_STORE|2D|NoExt|,,,,, memory:totalMB:181, usedMB:42
+2019-10-15 00:48:57.027 [main] INFO  com.graphhopper.reader.osm.OSMReader - creating graph. Found nodes (pillar+tower):8 550, totalMB:181, usedMB:34
+2019-10-15 00:48:57.138 [main] INFO  com.graphhopper.reader.osm.OSMReader - 43 132, now parsing ways
+2019-10-15 00:48:57.263 [main] INFO  com.graphhopper.reader.osm.OSMReader - 48 875, now parsing relations
+2019-10-15 00:48:57.264 [main] INFO  com.graphhopper.reader.osm.OSMReader - finished way processing. nodes: 2187, osmIdMap.size:8552, osmIdMap:0MB, nodeFlagsMap.size:2, relFlagsMap.size:0, zeroCounter:2 totalMB:181, usedMB:76
+2019-10-15 00:48:57.265 [main] INFO  com.graphhopper.reader.osm.OSMReader - time pass1:0s, pass2:0s, total:0s
+2019-10-15 00:48:57.267 [main] INFO  c.g.r.s.PrepareRoutingSubnetworks - start finding subnetworks (min:200, min one way:200) totalMB:181, usedMB:76
+2019-10-15 00:48:57.285 [main] INFO  c.g.r.s.PrepareRoutingSubnetworks - car-access|version=-318709518|bits=1|index=0|shift=24|store_both_directions=true findComponents time:0.0177327, size:9
+2019-10-15 00:48:57.290 [main] INFO  c.g.r.s.PrepareRoutingSubnetworks - 19 subnetworks found for car, totalMB:181, usedMB:76
+2019-10-15 00:48:57.291 [main] INFO  c.g.r.s.PrepareRoutingSubnetworks - optimize to remove subnetworks (19), unvisited-dead-end-nodes (14), maxEdges/node (6)
+2019-10-15 00:48:57.293 [main] INFO  c.g.reader.osm.GraphHopperOSM - edges: 2 848, nodes 2 169, there were 19 subnetworks. removed them => 18 less nodes
+2019-10-15 00:48:57.334 [main] INFO  c.g.storage.index.LocationIndexTree - location index created in 0.0377773s, size:3 275, leafs:926, precision:300, depth:4, checksum:2169, entries:[16, 16, 4, 4], entriesPerLeaf:3.5367172
+2019-10-15 00:48:57.346 [main] INFO  c.g.r.ch.CHAlgoFactoryDecorator - 1/1 calling CH prepare.doWork for fastest|car|edge_based=false|u_turn_costs=-1 ... (totalMB:181, usedMB:80)
+2019-10-15 00:48:57.413 [fastest_car_node] INFO  c.g.r.c.PrepareContractionHierarchies - nodes:      2 169, shortcuts:          0, updates:  0, checked-nodes:          0, t(total):   0.06,  t(period):   0.05, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.01, dijkstra-ratio:  21.10%, meanDegree: 1.00, dijkstras:      9 975, mem:        0MB, totalMB:181, usedMB:82
+2019-10-15 00:48:57.472 [fastest_car_node] INFO  c.g.r.c.PrepareContractionHierarchies - nodes:      1 735, shortcuts:          1, updates:  1, checked-nodes:        434, t(total):   0.12,  t(period):   0.09, t(lazy):   0.00, t(neighbor):   0.01, t(contr):   0.00, t(other) :   0.02, dijkstra-ratio:  43.90%, meanDegree: 1.01, dijkstras:     18 399, mem:        0MB, totalMB:181, usedMB:82
+2019-10-15 00:48:57.508 [fastest_car_node] INFO  c.g.r.c.PrepareContractionHierarchies - nodes:      1 301, shortcuts:        157, updates:  2, checked-nodes:        868, t(total):   0.16,  t(period):   0.11, t(lazy):   0.00, t(neighbor):   0.01, t(contr):   0.01, t(other) :   0.02, dijkstra-ratio:  49.96%, meanDegree: 2.52, dijkstras:     25 371, mem:        0MB, totalMB:181, usedMB:82
+2019-10-15 00:48:57.543 [fastest_car_node] INFO  c.g.r.c.PrepareContractionHierarchies - nodes:        867, shortcuts:        472, updates:  3, checked-nodes:      1 302, t(total):   0.19,  t(period):   0.14, t(lazy):   0.00, t(neighbor):   0.01, t(contr):   0.02, t(other) :   0.03, dijkstra-ratio:  55.08%, meanDegree: 1.99, dijkstras:     31 135, mem:        0MB, totalMB:181, usedMB:83
+2019-10-15 00:48:57.577 [fastest_car_node] INFO  c.g.r.c.PrepareContractionHierarchies - nodes:        433, shortcuts:        912, updates:  4, checked-nodes:      1 736, t(total):   0.23,  t(period):   0.15, t(lazy):   0.00, t(neighbor):   0.02, t(contr):   0.02, t(other) :   0.03, dijkstra-ratio:  59.07%, meanDegree: 3.05, dijkstras:     36 270, mem:        0MB, totalMB:181, usedMB:83
+2019-10-15 00:48:57.629 [fastest_car_node] INFO  c.g.r.c.PrepareContractionHierarchies - nodes:         33, shortcuts:      1 359, updates:  5, checked-nodes:      2 170, t(total):   0.28,  t(period):   0.15, t(lazy):   0.01, t(neighbor):   0.04, t(contr):   0.04, t(other) :   0.03, dijkstra-ratio:  63.25%, meanDegree: 3.03, dijkstras:     41 527, mem:        0MB, totalMB:181, usedMB:83
+2019-10-15 00:48:57.632 [fastest_car_node] INFO  c.g.r.c.PrepareContractionHierarchies - nodes:          0, shortcuts:      1 379, updates:  5, checked-nodes:      2 204, t(total):   0.28,  t(period):   0.15, t(lazy):   0.01, t(neighbor):   0.04, t(contr):   0.04, t(other) :   0.04, dijkstra-ratio:  63.15%, meanDegree: 1.48, dijkstras:     41 765, mem:        0MB, totalMB:181, usedMB:83
+2019-10-15 00:48:57.632 [fastest_car_node] INFO  c.g.r.c.PrepareContractionHierarchies - new shortcuts: 1 379, initSize:2 169, prepare|fastest, periodic:20, lazy:10, neighbor:20, t(total):   0.28,  t(period):   0.15, t(lazy):   0.01, t(neighbor):   0.04, t(contr):   0.04, t(other) :   0.04, dijkstra-ratio:  63.07%, lazy-overhead: 1%, totalMB:181, usedMB:83
+2019-10-15 00:48:57.632 [fastest_car_node] INFO  c.g.r.c.PrepareContractionHierarchies - took: 0s, graph now - num edges: 2 848, num nodes: 2 169, num shortcuts: 1 379
+2019-10-15 00:48:57.633 [main] INFO  c.g.reader.osm.GraphHopperOSM - flushing graph CH|car|RAM_STORE|2D|NoExt|5,15,4,3,3, details:edges:2 848(1MB), nodes:2 169(1MB), name:(1MB), geo:11 582(1MB), bounds:-84.97359495550978,-84.60905983170255,39.41967668577306,39.56783763098354, CHGraph|fastest|car|edge_based=false|u_turn_costs=-1, shortcuts:1 379, nodesCH:(1MB), totalMB:181, usedMB:83)
+2019-10-15 00:48:57.665 [main] INFO  c.g.reader.osm.GraphHopperOSM - flushed graph totalMB:181, usedMB:88)
+2019-10-15 00:48:57.666 [main] INFO  c.g.http.GraphHopperManaged - loaded graph at:oxford-gh, data_reader_file:oxford.pbf, encoded values:roundabout|version=283388307|bits=1|index=0|shift=0|store_both_directions=false,road_class|version=888755028|bits=5|index=0|shift=1|store_both_directions=false,road_class_link|version=146075245|bits=1|index=0|shift=6|store_both_directions=false,road_environment|version=-446726394|bits=3|index=0|shift=7|store_both_directions=false,max_speed|version=-1300485567|bits=5|index=0|shift=10|store_both_directions=true,road_access|version=-313723172|bits=4|index=0|shift=20|store_both_directions=false, edges:2 848(1MB), nodes:2 169(1MB), name:(1MB), geo:11 582(1MB), bounds:-84.97359495550978,-84.60905983170255,39.41967668577306,39.56783763098354, CHGraph|fastest|car|edge_based=false|u_turn_costs=-1, shortcuts:1 379, nodesCH:(1MB)
+2019-10-15 00:48:58.448 [main] INFO  i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     / (com.graphhopper.http.resources.RootResource)
+    GET     /i18n (com.graphhopper.resources.I18NResource)
+    GET     /i18n/{locale} (com.graphhopper.resources.I18NResource)
+    GET     /info (com.graphhopper.resources.InfoResource)
+    GET     /isochrone (com.graphhopper.resources.IsochroneResource)
+    GET     /mvt/{z}/{x}/{y}.mvt (com.graphhopper.resources.MVTResource)
+    GET     /nearest (com.graphhopper.resources.NearestResource)
+    GET     /route (com.graphhopper.resources.RouteResource)
+    GET     /spt (com.graphhopper.resources.SPTResource)
+
+2019-10-15 00:48:58.450 [main] INFO  o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@3e4d40ea{/,null,AVAILABLE}
+2019-10-15 00:48:58.458 [main] INFO  io.dropwizard.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+2019-10-15 00:48:58.465 [main] INFO  o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@1cd2143b{/,null,AVAILABLE}
+2019-10-15 00:48:58.493 [main] INFO  o.e.jetty.server.AbstractConnector - Started application@30b975ad{HTTP/1.1,[http/1.1]}{localhost:8989}
+2019-10-15 00:48:58.501 [main] INFO  o.e.jetty.server.AbstractConnector - Started admin@75e09567{HTTP/1.1,[http/1.1]}{localhost:8990}
+2019-10-15 00:48:58.501 [main] INFO  org.eclipse.jetty.server.Server - Started @5872ms
+2019-10-15 00:55:34.890 [main] INFO  i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+2019-10-15 00:55:34.938 [main] INFO  i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+2019-10-15 00:55:36.426 [main] INFO  i.d.b.assets.ConfiguredAssetsBundle - Registering ConfiguredAssetBundle with name: assets for path /maps/*
+2019-10-15 00:55:36.440 [main] INFO  io.dropwizard.server.ServerFactory - Starting GraphHopperApplication
+                        _     _
+   __ _ _ __ __ _ _ __ | |__ | |__   ___  _ __  _ __   ___ _ __
+  / _` | '__/ _` | '_ \| '_ \| '_ \ / _ \| '_ \| '_ \ / _ \ '__|
+ | (_| | | | (_| | |_) | | | | | | | (_) | |_) | |_) |  __/ |
+  \__, |_|  \__,_| .__/|_| |_|_| |_|\___/| .__/| .__/ \___|_|
+  |___/          |_|                     |_|   |_|
+
+2019-10-15 00:55:36.513 [main] INFO  o.e.jetty.setuid.SetUIDListener - Opened application@30b975ad{HTTP/1.1,[http/1.1]}{localhost:8989}
+2019-10-15 00:55:36.513 [main] INFO  o.e.jetty.setuid.SetUIDListener - Opened admin@75e09567{HTTP/1.1,[http/1.1]}{localhost:8990}
+2019-10-15 00:55:36.515 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.z-SNAPSHOT; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_201-b09
+2019-10-15 00:55:36.611 [main] INFO  c.g.reader.osm.GraphHopperOSM - version 0.13.0|2019-09-17T21:00:20Z (5,15,4,3,3,5)
+2019-10-15 00:55:36.616 [main] INFO  c.g.reader.osm.GraphHopperOSM - graph CH|car|RAM_STORE|2D|NoExt|5,15,4,3,3, details:edges:2 848(1MB), nodes:2 169(1MB), name:(1MB), geo:11 582(1MB), bounds:-84.97359476924527,-84.60905983170255,39.41967668577306,39.56783763098354, CHGraph|fastest|car|edge_based=false|u_turn_costs=-1, shortcuts:1 379, nodesCH:(1MB)
+2019-10-15 00:55:36.616 [main] INFO  c.g.http.GraphHopperManaged - loaded graph at:oxford-gh, data_reader_file:oxford.pbf, encoded values:roundabout|version=283388307|bits=1|index=0|shift=0|store_both_directions=false,road_class|version=888755028|bits=5|index=0|shift=1|store_both_directions=false,road_class_link|version=146075245|bits=1|index=0|shift=6|store_both_directions=false,road_environment|version=-446726394|bits=3|index=0|shift=7|store_both_directions=false,max_speed|version=-1300485567|bits=5|index=0|shift=10|store_both_directions=true,road_access|version=-313723172|bits=4|index=0|shift=20|store_both_directions=false, edges:2 848(1MB), nodes:2 169(1MB), name:(1MB), geo:11 582(1MB), bounds:-84.97359476924527,-84.60905983170255,39.41967668577306,39.56783763098354, CHGraph|fastest|car|edge_based=false|u_turn_costs=-1, shortcuts:1 379, nodesCH:(1MB)
+2019-10-15 00:55:37.206 [main] INFO  i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     / (com.graphhopper.http.resources.RootResource)
+    GET     /i18n (com.graphhopper.resources.I18NResource)
+    GET     /i18n/{locale} (com.graphhopper.resources.I18NResource)
+    GET     /info (com.graphhopper.resources.InfoResource)
+    GET     /isochrone (com.graphhopper.resources.IsochroneResource)
+    GET     /mvt/{z}/{x}/{y}.mvt (com.graphhopper.resources.MVTResource)
+    GET     /nearest (com.graphhopper.resources.NearestResource)
+    GET     /route (com.graphhopper.resources.RouteResource)
+    GET     /spt (com.graphhopper.resources.SPTResource)
+
+2019-10-15 00:55:37.208 [main] INFO  o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@251c8145{/,null,AVAILABLE}
+2019-10-15 00:55:37.214 [main] INFO  io.dropwizard.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+2019-10-15 00:55:37.222 [main] INFO  o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@60b5e80d{/,null,AVAILABLE}
+2019-10-15 00:55:37.246 [main] INFO  o.e.jetty.server.AbstractConnector - Started application@30b975ad{HTTP/1.1,[http/1.1]}{localhost:8989}
+2019-10-15 00:55:37.254 [main] INFO  o.e.jetty.server.AbstractConnector - Started admin@75e09567{HTTP/1.1,[http/1.1]}{localhost:8990}
+2019-10-15 00:55:37.254 [main] INFO  org.eclipse.jetty.server.Server - Started @3929ms
+2019-10-15 00:57:17.615 [dw-17 - GET /route?point=39.510744%2C-84.73365&point=39.509697%2C-84.73316&type=json&locale=en-US&vehicle=car&weighting=fastest&elevation=false&key=] INFO  c.g.resources.RouteResource - point=39.510744%2C-84.73365&point=39.509697%2C-84.73316&type=json&locale=en-US&vehicle=car&weighting=fastest&elevation=false&key= 127.0.0.1 en_US Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36 [39.510744,-84.73365, 39.509697,-84.73316], took:0.23030621, , fastest, car, alternatives: 1, distance0: 521.7255234284958, weight0: 66.79784221712924, time0: 1min, points0: 10, debugInfo: idLookup:0.0393074s; tmode:NODE_BASED; , algoInit:0.0070106s, dijkstrabi|ch-routing:0.0040585s, extract time:3.162E-4;visited nodes sum: 20;, algoInit:0.0070106s, dijkstrabi|ch-routing:0.0040585s, extract time:3.162E-4;visited nodes sum: 20, simplify (23->23)
+2019-10-15 00:57:34.617 [dw-19 - GET /route?point=39.510744%2C-84.73365&point=39.509697%2C-84.73316&type=gpx&gpx.route=false&gpx.track=true&gpx.waypoints=false&locale=en-US&vehicle=car&weighting=fastest&elevation=false&key=] INFO  c.g.resources.RouteResource - point=39.510744%2C-84.73365&point=39.509697%2C-84.73316&type=gpx&gpx.route=false&gpx.track=true&gpx.waypoints=false&locale=en-US&vehicle=car&weighting=fastest&elevation=false&key= 127.0.0.1 en_US Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36 [39.510744,-84.73365, 39.509697,-84.73316], took:0.0104993, , fastest, car, alternatives: 1, distance0: 521.7255234284958, weight0: 66.79784221712924, time0: 1min, points0: 10, debugInfo: idLookup:0.0074656s; tmode:NODE_BASED; , algoInit:1.689E-4s, dijkstrabi|ch-routing:8.539E-4s, extract time:1.27E-4;visited nodes sum: 20;, algoInit:1.689E-4s, dijkstrabi|ch-routing:8.539E-4s, extract time:1.27E-4;visited nodes sum: 20, simplify (23->23)
+2019-10-15 00:59:17.267 [dw-21 - GET /route?point=39.510744%2C-84.73365&point=39.509697%2C-84.73316&type=json&locale=en-US&vehicle=car&weighting=fastest&elevation=false&key=] INFO  c.g.resources.RouteResource - point=39.510744%2C-84.73365&point=39.509697%2C-84.73316&type=json&locale=en-US&vehicle=car&weighting=fastest&elevation=false&key= 127.0.0.1 en_US Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36 [39.510744,-84.73365, 39.509697,-84.73316], took:0.0153096, , fastest, car, alternatives: 1, distance0: 521.7255234284958, weight0: 66.79784221712924, time0: 1min, points0: 10, debugInfo: idLookup:0.0098241s; tmode:NODE_BASED; , algoInit:3.141E-4s, dijkstrabi|ch-routing:0.0019622s, extract time:3.282E-4;visited nodes sum: 20;, algoInit:3.141E-4s, dijkstrabi|ch-routing:0.0019622s, extract time:3.282E-4;visited nodes sum: 20, simplify (23->23)
+2019-10-15 01:09:14.281 [dw-36 - GET /route?point=39.510744%2C-84.73365&point=39.509697%2C-84.73316&type=gpx&gpx.route=false&gpx.track=true&gpx.waypoints=false&locale=en-US&vehicle=car&weighting=fastest&elevation=false&key=] INFO  c.g.resources.RouteResource - point=39.510744%2C-84.73365&point=39.509697%2C-84.73316&type=gpx&gpx.route=false&gpx.track=true&gpx.waypoints=false&locale=en-US&vehicle=car&weighting=fastest&elevation=false&key= 127.0.0.1 en_US Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36 [39.510744,-84.73365, 39.509697,-84.73316], took:0.0123791, , fastest, car, alternatives: 1, distance0: 521.7255234284958, weight0: 66.79784221712924, time0: 1min, points0: 10, debugInfo: idLookup:0.005774s; tmode:NODE_BASED; , algoInit:3.204E-4s, dijkstrabi|ch-routing:0.0014956s, extract time:2.948E-4;visited nodes sum: 20;, algoInit:3.204E-4s, dijkstrabi|ch-routing:0.0014956s, extract time:2.948E-4;visited nodes sum: 20, simplify (23->23)
+2019-10-15 12:03:17.580 [main] INFO  i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+2019-10-15 12:03:17.584 [main] INFO  i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+2019-10-15 12:03:19.299 [main] INFO  i.d.b.assets.ConfiguredAssetsBundle - Registering ConfiguredAssetBundle with name: assets for path /maps/*
+2019-10-15 12:03:19.315 [main] INFO  io.dropwizard.server.ServerFactory - Starting GraphHopperApplication
+                        _     _
+   __ _ _ __ __ _ _ __ | |__ | |__   ___  _ __  _ __   ___ _ __
+  / _` | '__/ _` | '_ \| '_ \| '_ \ / _ \| '_ \| '_ \ / _ \ '__|
+ | (_| | | | (_| | |_) | | | | | | | (_) | |_) | |_) |  __/ |
+  \__, |_|  \__,_| .__/|_| |_|_| |_|\___/| .__/| .__/ \___|_|
+  |___/          |_|                     |_|   |_|
+
+2019-10-15 12:03:19.406 [main] INFO  o.e.jetty.setuid.SetUIDListener - Opened application@30b975ad{HTTP/1.1,[http/1.1]}{localhost:8989}
+2019-10-15 12:03:19.407 [main] INFO  o.e.jetty.setuid.SetUIDListener - Opened admin@75e09567{HTTP/1.1,[http/1.1]}{localhost:8990}
+2019-10-15 12:03:19.409 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.z-SNAPSHOT; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_201-b09
+2019-10-15 12:03:19.519 [main] INFO  c.g.reader.osm.GraphHopperOSM - version 0.13.0|2019-09-17T21:00:20Z (5,15,4,3,3,5)
+2019-10-15 12:03:19.529 [main] INFO  c.g.reader.osm.GraphHopperOSM - graph CH|car|RAM_STORE|2D|NoExt|5,15,4,3,3, details:edges:2 848(1MB), nodes:2 169(1MB), name:(1MB), geo:11 582(1MB), bounds:-84.97359476924527,-84.60905983170255,39.41967668577306,39.56783763098354, CHGraph|fastest|car|edge_based=false|u_turn_costs=-1, shortcuts:1 379, nodesCH:(1MB)
+2019-10-15 12:03:19.529 [main] INFO  c.g.http.GraphHopperManaged - loaded graph at:oxford-gh, data_reader_file:oxford.pbf, encoded values:roundabout|version=283388307|bits=1|index=0|shift=0|store_both_directions=false,road_class|version=888755028|bits=5|index=0|shift=1|store_both_directions=false,road_class_link|version=146075245|bits=1|index=0|shift=6|store_both_directions=false,road_environment|version=-446726394|bits=3|index=0|shift=7|store_both_directions=false,max_speed|version=-1300485567|bits=5|index=0|shift=10|store_both_directions=true,road_access|version=-313723172|bits=4|index=0|shift=20|store_both_directions=false, edges:2 848(1MB), nodes:2 169(1MB), name:(1MB), geo:11 582(1MB), bounds:-84.97359476924527,-84.60905983170255,39.41967668577306,39.56783763098354, CHGraph|fastest|car|edge_based=false|u_turn_costs=-1, shortcuts:1 379, nodesCH:(1MB)
+2019-10-15 12:03:20.236 [main] INFO  i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     / (com.graphhopper.http.resources.RootResource)
+    GET     /i18n (com.graphhopper.resources.I18NResource)
+    GET     /i18n/{locale} (com.graphhopper.resources.I18NResource)
+    GET     /info (com.graphhopper.resources.InfoResource)
+    GET     /isochrone (com.graphhopper.resources.IsochroneResource)
+    GET     /mvt/{z}/{x}/{y}.mvt (com.graphhopper.resources.MVTResource)
+    GET     /nearest (com.graphhopper.resources.NearestResource)
+    GET     /route (com.graphhopper.resources.RouteResource)
+    GET     /spt (com.graphhopper.resources.SPTResource)
+
+2019-10-15 12:03:20.238 [main] INFO  o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@251c8145{/,null,AVAILABLE}
+2019-10-15 12:03:20.246 [main] INFO  io.dropwizard.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+2019-10-15 12:03:20.254 [main] INFO  o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@60b5e80d{/,null,AVAILABLE}
+2019-10-15 12:03:20.287 [main] INFO  o.e.jetty.server.AbstractConnector - Started application@30b975ad{HTTP/1.1,[http/1.1]}{localhost:8989}
+2019-10-15 12:03:20.298 [main] INFO  o.e.jetty.server.AbstractConnector - Started admin@75e09567{HTTP/1.1,[http/1.1]}{localhost:8990}
+2019-10-15 12:03:20.298 [main] INFO  org.eclipse.jetty.server.Server - Started @5259ms
+2019-10-15 12:06:28.063 [dw-15 - GET /route?point=39.510744%2C-84.73365&point=39.509697%2C-84.73316&type=json&locale=en-US&vehicle=car&weighting=fastest&elevation=false&key=] INFO  c.g.resources.RouteResource - point=39.510744%2C-84.73365&point=39.509697%2C-84.73316&type=json&locale=en-US&vehicle=car&weighting=fastest&elevation=false&key= 127.0.0.1 en_US Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36 [39.510744,-84.73365, 39.509697,-84.73316], took:0.1551446, , fastest, car, alternatives: 1, distance0: 521.7255234284958, weight0: 66.79784221712924, time0: 1min, points0: 10, debugInfo: idLookup:0.0416251s; tmode:NODE_BASED; , algoInit:0.0718625s, dijkstrabi|ch-routing:0.0042143s, extract time:4.141E-4;visited nodes sum: 20;, algoInit:0.0718625s, dijkstrabi|ch-routing:0.0042143s, extract time:4.141E-4;visited nodes sum: 20, simplify (23->23)
